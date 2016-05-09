@@ -23,6 +23,8 @@ setTimeout(function (){
 
 expireMemory.put('key2', 'some value', 1000);
 
+console.log(expireMemory.expiry('key2')); // current time that key was set (epoc ms) + 1000
+
 console.log(expireMemory.get('key2')); //some value
 expireMemory.put('key2', 'new value', 1010); //previous timeout gets removed and new one is set
 
@@ -40,5 +42,4 @@ console.log(expireMemory.hasTimeout('key1noexpire')); //false
 console.log(expireMemory.timeouts()); //[ 'key', 'key2' ]
 console.log(expireMemory.exists('key1noexpire')); //true
 console.log(expireMemory.exists('newkey')); //false
-
 ```

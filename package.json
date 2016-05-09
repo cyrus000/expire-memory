@@ -1,6 +1,6 @@
 {
   "name": "expire-memory",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "key value in memory with vairable expire times",
   "main": "app.js",
   "scripts": {
